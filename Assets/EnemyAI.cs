@@ -6,6 +6,12 @@ public class EnemyAI : MonoBehaviour
 {
     public float EnemySpeed = 3.0f;
     public GameObject EnemyExplosion;
+    private UiManager _uiManager;
+    void Start()
+    {
+        _uiManager = GameObject.Find("Canvas").GetComponent<UiManager>();
+    }
+
     void Update()
     {
         transform.Translate(Vector3.down * EnemySpeed * Time.deltaTime);
@@ -22,15 +28,19 @@ public class EnemyAI : MonoBehaviour
         {
             Instantiate(EnemyExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            Instantiate(EnemyExplosion, transform.position, Quaternion.identity);
+            _uiManager.UpdateScore();
+            Destroy(this.gameObject);
+           
         }
         else if (other.tag == "Player")
         {
             player player = other.GetComponent <player> ();
             player.LifeDamageFun();
-            
+            Instantiate(EnemyExplosion, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
-        Instantiate(EnemyExplosion, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+       
     }
 
 

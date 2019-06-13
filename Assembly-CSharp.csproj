@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1DE19F90-A490-FCF9-3033-2F6D3DDF6B00}</ProjectGuid>
+    <ProjectGuid>{39543BF4-456E-6EED-5297-9E39F38A075E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,23 +62,27 @@
   <ItemGroup>
     <Compile Include="Assets\2D Galaxy Assets\script\laser.cs" />
     <Compile Include="Assets\2D Galaxy Assets\script\player.cs" />
+    <Compile Include="Assets\2D Galaxy Assets\script\shield_move.cs" />
+    <Compile Include="Assets\2D Galaxy Assets\script\Spawn_manager.cs" />
+    <Compile Include="Assets\2D Galaxy Assets\script\UiManager.cs" />
+    <Compile Include="Assets\Destroyer.cs" />
     <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\powerInc.cs" />
     <None Include="Assets\2D Galaxy Assets\Game\Materials\Shaders\Galaxy.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -282,13 +286,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/unity/unity project/galaxy shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/unity/unity_project/galaxy_shooter/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

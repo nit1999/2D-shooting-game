@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8598837843489453180}
   - component: {fileID: 8598837843489453183}
   - component: {fileID: 419919036887361911}
-  - component: {fileID: 1858425169897243452}
+  - component: {fileID: 3784130990893269012}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,8 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84716fccac0aba47a68c2e540870587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySpeed: 1
---- !u!50 &1858425169897243452
+  EnemySpeed: 5
+  EnemyExplosion: {fileID: 5609027206778880945, guid: 59112adeea777084a874667b5f6ef57d,
+    type: 3}
+--- !u!50 &3784130990893269012
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

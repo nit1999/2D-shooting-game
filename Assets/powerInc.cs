@@ -32,7 +32,8 @@ public class powerInc : MonoBehaviour
                 }
                 else if (PowerIncrId == 2)
                 {
-
+                    //for shield
+                    player.EnableShield();
                 }
                 //destroy themself
                 Destroy(this.gameObject);

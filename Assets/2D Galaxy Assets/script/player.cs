@@ -9,6 +9,9 @@ public class player : MonoBehaviour
     private float speedUp = 12f;
     public int LifeDamage = 3;
     public bool IsTripleShot=false;
+    public bool IsShield = false;
+    public GameObject ShieldPrefab;
+    public GameObject shieldProtect;
     public GameObject playerExplosionPrefab;
    public GameObject laserPrefab;
   
@@ -19,11 +22,17 @@ public class player : MonoBehaviour
 
     public bool IsPowerSpeedUp=false;
 
+    private UiManager _uiManager;
     void Start()
     {
-       /* transform.position = new Vector3(1, 1,0);
-        Debug.Log("name of object=" + name);
-        */
+        /* transform.position = new Vector3(1, 1,0);
+         Debug.Log("name of object=" + name);
+         */
+        _uiManager = GameObject.Find("Canvas").GetComponent<UiManager>();
+        if (_uiManager != null)                     //if _uiManager is available then decrease lives
+        {
+            _uiManager.UpdateLives(LifeDamage);
+        }
     }
 
     
@@ -108,11 +117,28 @@ public class player : MonoBehaviour
 
    public void LifeDamageFun()
     {
-        LifeDamage--;
-        if(LifeDamage < 1)
+        if (IsShield == true)
         {
-            Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            IsShield = false;
+            shieldProtect.SetActive(false);
+            return;
         }
+            LifeDamage--;
+        _uiManager.UpdateLives(LifeDamage);//live decrease and image live also decrease in UiManager class
+
+        if (LifeDamage < 1)
+            {
+                Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        
+
     }
+    public void EnableShield()
+    {
+        IsShield = true;
+        shieldProtect.SetActive(true);
+    }
+
+   
 }
